@@ -1,0 +1,11 @@
+@import "./commons/reset";
+@import "./commons/var";
+@import "./commons/grid";
+@import "./commons/clearfix";
+.selector {
+    color: red;
+
+    @include wrsp('xs') {
+        color: blue;
+    }
+}

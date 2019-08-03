@@ -1,0 +1,17 @@
+// width container
+$container: 1170px;
+// x width responsive
+$breakpoints: (
+    'xs': ( min-width: 320px ), // 320px <= x < 768px
+    'sm': ( min-width: 768px ), // 768px <= x < 991px
+    'md': ( min-width: 992px ), // 992px <= x < 1199px
+    'lg': ( min-width: 1200px ) // >= 1200px
+) !default;
+
+@mixin wrsp($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+}
