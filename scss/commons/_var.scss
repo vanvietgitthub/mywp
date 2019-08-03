@@ -1,5 +1,14 @@
 // width container
 $container: 1170px;
+// colors
+$oneColor: #ffffff;
+$twoColor: #ffffff;
+$threeColor: #ffffff;
+// border style
+$oneBorder: 1px solid #E0E0E0;
+// background
+$oneBg: #f0f0f0;
+$twoBg: #f8f8f8;
 // x width responsive
 $breakpoints: (
     'xs': ( min-width: 320px ), // 320px <= x < 768px
@@ -8,10 +17,13 @@ $breakpoints: (
     'lg': ( min-width: 1200px ) // >= 1200px
 ) !default;
 
-@mixin wrsp($breakpoint) {
+@mixin respon-to($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @media #{inspect(map-get($breakpoints, $breakpoint))} {
             @content;
         }
     }
 }
+// custom
+$asideContainer: calc(100% - #{$container});
+$halfAside: calc(#{$asideContainer} / 2);

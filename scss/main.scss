@@ -2,10 +2,8 @@
 @import "./commons/var";
 @import "./commons/grid";
 @import "./commons/clearfix";
-.selector {
-    color: red;
-
-    @include wrsp('xs') {
-        color: blue;
-    }
-}
+@import "./commons/jquery.fancybox.min.css";
+@import "./commons/slick-theme.scss";
+@import "./commons/slick.scss";
+@import "./commons/flickity.min.css";
+@import "./commons/images";
